@@ -17,9 +17,9 @@ int main(void)
 		{
 			for (iii = ii + 1; iii < 10; iii++)
 			{
-				putchar(iii);
-				putchar(ii);
-				putchar(i);
+				putchar((i % 10) + '0');
+				putchar((ii % 10) + '0');
+				putchar((iii % 10) + '0');
 				if (i == 7 && ii == 8 && iii == 9)
 					continue;
 				putchar(',');

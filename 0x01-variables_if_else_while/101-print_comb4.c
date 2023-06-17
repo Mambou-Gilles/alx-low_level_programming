@@ -11,24 +11,20 @@ int main(void)
 	int ii;
 	int iii;
 
-	for (iii = '0'; iii <= '9'; iii++)
+	for (i = 0; iii < 8; i++)
 	{
-		for (ii = '0'; ii <= '9'; ii++)
+		for (ii = 0; ii < 9; ii++)
 		{
-			for (i = '0'; i <= '9'; i++)
+			for (iii = ii + 1; iii < 10; iii++)
 			{
-				if (!((i == ii) || (ii == iii) || (ii > i) || (iii > ii)))
-				{
-					putchar(iii);
-					putchar(ii);
-					putchar(i);
-					if (!(i == '9' && iii == '7' && i == '8'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+				putchar(iii);
+				putchar(ii);
+				putchar(i);
+				if (i == 7 && ii == 8 && iii == 9)
+					continue;
+				putchar(',');
+				putchar(' ');
 				}
-			}
 		}
 	}
 	putchar('\n');
